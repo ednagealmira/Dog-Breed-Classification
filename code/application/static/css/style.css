@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Work+Sans:wght@300;400;500;600&display=swap');
+/* font-family: 'Montserrat', sans-serif; 
+font-family: 'Work Sans', sans-serif; */
+
+body {
+    background: #FFF5FD;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 32px;
+    margin-left: 112px;
+    margin-right: 112px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title img {
+    width: 570px;
+    height: 21px;
+    margin-top: 4px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #342261;
+    margin: 0;
+}
+
+.content {
+    margin-top: 24px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    /* letter-spacing: 0.01em; */
+    color: #342261;
+}
+
+.field-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-input input {
+    margin-top: 8px;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.custom-file-input {
+    color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+ }
+
+.custom-file-input::before {
+    content: 'Pilih Gambar';
+    background-color: #6170E2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    white-space: nowrap;
+    -webkit-user-select: none;
+}
+
+.custom-file-input:hover::before {
+    background-color: #4954A9;
+}
+
+.btn-predict {
+    background-color: #6170E2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition-duration: 0.4s;
+}
+
+.btn-predict:hover {
+    background-color: #4954A9;
+}
+
+.field-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+
+/* .field-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 1px;
+} */
