@@ -1,4 +1,4 @@
-export const DOGBREED_CLASSES = {
+const DOGBREED_CLASSES = {
     0: 'Afghan',
     1: 'African Wild Dog',
     2: 'Airedale',
@@ -88,14 +88,39 @@ let model;
     $(".progress-bar").hide();
 })();
 
+// preprocess the image to be mobilenet friendly
+function preprocessImage(image, modelName) {
+    // resize the input image to mobilenet's target size of (224, 224)
+    let tensor = tf.browser.fromPixels(image)
+      .resizeNearestNeighbor([224, 224])
+      .toFloat();
+  
+    // if model is not available, send the tensor with expanded dimensions
+    if (modelName === undefined) {
+      return tensor.expandDims();
+    } 
+  
+    // if model is mobilenet, feature scale tensor image to range [-1, 1]
+    else if (modelName === "mobilenet") {
+      let offset = tf.scalar(127.5);
+      return tensor.sub(offset)
+        .div(offset)
+        .expandDims();
+    } 
+  
+    // else throw an error
+    else {
+      alert("Unknown model name..")
+    }
+}
+
 $("#predict-button").click(async function () {
     let image = $("#selected-image").get(0);
-    let tensor = tf.browser.fromPixels(image)
-        .resizeNearestNeighbor([224,224])
-        .toFloat()
-        .expandDims();
-
-    //more pre-processing to be added here later
+    let tensor = preprocessImage(image, 'mobilenet');
+    // let tensor = tf.browser.fromPixels(image)
+    //     .resizeNearestNeighbor([224,224])
+    //     .toFloat()
+    //     .expandDims();
 
     let predictions = await model.predict(tensor).data();
     let top5 = Array.from(predictions)
