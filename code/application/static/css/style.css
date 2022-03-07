@@ -90,7 +90,7 @@ h2 {
     background-color: #4954A9;
 }
 
-.btn-predict {
+.btn-primary {
     background-color: #6170E2;
     border: none;
     border-radius: 5px;
@@ -108,7 +108,7 @@ h2 {
     transition-duration: 0.4s;
 }
 
-.btn-predict:hover {
+.btn-primary:hover {
     background-color: #4954A9;
 }
 

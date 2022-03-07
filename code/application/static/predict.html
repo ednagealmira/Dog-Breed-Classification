@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -29,21 +29,19 @@
                 </div>
                 <div class="field-picture">
                     <img id="selected-image" src="">
-                    <button id="btn-predict" class="btn-predict">Klasifikasi Sekarang</button>
+                    <button id="predict-button" class="btn-primary">Klasifikasi Sekarang</button>
                 </div>
-                <div class="classification">
+                <div>
                     <h4>Hasil Klasifikasi:</h4>
-                    <ol id="classification-list"></ol>
+                    <ol id="prediction-list"></ol>
                 </div>
             </div>
         </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
-    <script src="dogbreed_classes.js"></script>
-    <script src="predict.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script type="module" src="predict.js"></script>
 
 </body>
 
