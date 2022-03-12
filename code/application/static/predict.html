@@ -12,30 +12,34 @@
 
 <body>
     <main>
-        <div class="container">
+        <div class="my-container">
             <div class="title">
                 <h2>Klasifikasi Ras Anjing</h2>
                 <img src="./asset/curved-line_yellow.png" alt="">
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="progress progress-bar progress-bar-striped progress-bar-animated mb-2">Loading Model</div>
-                </div>
-            </div>
             <div class="content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="progress progress-bar progress-bar-striped progress-bar-animated mb-2">Loading Model</div>
+                    </div>
+                </div>
                 <div class="field-input">
                     <label>Silahkan pilih gambar anjing yang akan diklasifikasi ras nya</label>
                     <input class="custom-file-input" type="file" id="image-selector">
                 </div>
                 <div class="field-picture">
                     <img id="selected-image" src="">
-                    <button id="predict-button" class="btn-primary">Klasifikasi Sekarang</button>
+                    <button id="predict-button" class="btn-predict">Klasifikasi Sekarang</button>
                 </div>
-                <div>
+                <div class="prediction">
                     <h4>Hasil Klasifikasi:</h4>
                     <ol id="prediction-list"></ol>
                 </div>
             </div>
+            <!-- <div class="footer">
+                <hr class="custom-line">
+                <p>Copyright 2022 • All rights reserved • Ednagea Almira</p>
+            </div> -->
         </div>
     </main>
 

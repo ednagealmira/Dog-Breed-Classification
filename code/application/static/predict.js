@@ -84,7 +84,7 @@ $("#image-selector").change(function () {
 
 let model;
 (async function () {
-    model = await tf.loadLayersModel('http://192.168.159.104:81/tfjs-model/MobileNet2/model.json');
+    model = await tf.loadLayersModel('http://localhost:81/tfjs-model/MobileNet5/model.json');
     $(".progress-bar").hide();
 })();
 
