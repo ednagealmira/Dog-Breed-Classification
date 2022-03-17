@@ -123,7 +123,7 @@ $("#predict-button").click(async function () {
     //     .expandDims();
 
     let predictions = await model.predict(tensor).data();
-    let top5 = Array.from(predictions)
+    let top3 = Array.from(predictions)
         .map(function (p, i) {
             return {
                 probability: p,
@@ -131,10 +131,10 @@ $("#predict-button").click(async function () {
             };
         }).sort(function (a, b) {
             return b.probability - a.probability;
-        }).slice(0, 5);
+        }).slice(0, 3);
     
         $("#prediction-list").empty();
-        top5.forEach(function (p) {
+        top3.forEach(function (p) {
             $("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
         });
 });
