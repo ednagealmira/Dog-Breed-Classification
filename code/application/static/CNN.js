@@ -26,7 +26,7 @@ class Cnn {
             }).sort(function (a, b) {
                 return b.probability - a.probability;
             }).slice(0, 3);
-        
+            
         $("#prediction-list").empty();
         top3.forEach(function (p) {
             $("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
