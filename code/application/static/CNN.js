@@ -32,10 +32,5 @@ class Cnn {
             `<h4>Hasil Klasifikasi:</h4>
             <p>${(predict_result[0].probability.toFixed(6))*100}% ${predict_result[0].className}</p>`
             );
-
-        // $("#prediction-list").empty();
-        // top3.forEach(function (p) {
-        //     $("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
-        // });
     }
 }
