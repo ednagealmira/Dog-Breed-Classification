@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Work+Sans:wght@300;400;500;600&display=swap');
-/* font-family: 'Montserrat', sans-serif; 
-font-family: 'Work Sans', sans-serif; */
 
 body {
     background: #FFF5FD !important;
@@ -9,7 +7,6 @@ body {
 .my-container {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     margin-top: 54px;    
     margin-left: 112px;
     margin-right: 112px;
@@ -42,7 +39,6 @@ h2 {
     font-family: 'Work Sans', sans-serif;
     font-weight: normal;
     font-size: 16px;
-    /* letter-spacing: 0.01em; */
     color: #342261;
 }
 
@@ -90,6 +86,19 @@ h2 {
     background-color: #4954A9;
 }
 
+.field-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.field-picture img {
+    max-width: 240px;
+    max-height: 240px;
+    border-radius: 5px;
+}
+
 .btn-predict {
     background-color: #6170E2;
     border: none;
@@ -113,19 +122,6 @@ h2 {
     background-color: #4954A9;
 }
 
-.field-picture {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 16px;
-}
-
-.field-picture img {
-    max-width: 240px;
-    max-height: 240px;
-    border-radius: 5px;
-}
-
 .prediction {
     margin-top: 16px;
     margin-bottom: 48px;
@@ -141,22 +137,3 @@ h2 {
     font-size: 24px;
     font-weight: 600;
 }
-
-/* .footer {
-    margin-top: 88px;
-    bottom:0;
-    width:100%;
-}
-
-.custom-line {
-    color: #c2a5bc;
-}
-
-.footer p {
-    font-family: Work Sans;
-    font-weight: 300;
-    font-size: 14px;
-    text-align: center;
-    color: #342261;
-    margin: 32px 0px;
-} */
